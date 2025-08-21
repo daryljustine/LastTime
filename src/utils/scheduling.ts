@@ -603,9 +603,12 @@ export function findNextAvailableTimeSlot(
   // Filter commitments to exclude deleted occurrences and check date range applicability
   const activeCommitments = commitments.filter(commitment => {
     if (!targetDate) return true; // If no target date, include all commitments
-    
-    // Use the proper function to check if commitment applies to this date
-    return doesCommitmentApplyToDate(commitment, targetDate);
+
+    // Commitment must apply to the date AND not be explicitly deleted for that date
+    return (
+      doesCommitmentApplyToDate(commitment, targetDate) &&
+      !(commitment.deletedOccurrences?.includes(targetDate))
+    );
   });
   
   activeCommitments.forEach(c => {
