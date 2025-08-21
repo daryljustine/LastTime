@@ -517,7 +517,9 @@ function App() {
                         userPrefersPressure: parsedSettings.userPrefersPressure || false,
                         studyPlanMode: parsedSettings.studyPlanMode || 'even',
                         dateSpecificStudyWindows: parsedSettings.dateSpecificStudyWindows || [],
-                        daySpecificStudyWindows: parsedSettings.daySpecificStudyWindows || []
+                        daySpecificStudyWindows: parsedSettings.daySpecificStudyWindows || [],
+                        daySpecificStudyHours: parsedSettings.daySpecificStudyHours || [],
+                        showDaySpecificHoursSection: parsedSettings.showDaySpecificHoursSection || false
                     };
                 }
             }
