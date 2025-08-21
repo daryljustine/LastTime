@@ -225,7 +225,9 @@ function App() {
                         userPrefersPressure: false,
                         studyPlanMode: 'even',
                         dateSpecificStudyWindows: [],
-                        daySpecificStudyWindows: []
+                        daySpecificStudyWindows: [],
+                        daySpecificStudyHours: [],
+                        showDaySpecificHoursSection: false
                     };
                     setSettings({ ...defaultSettings, ...parsed });
                 }
