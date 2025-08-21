@@ -483,7 +483,9 @@ function App() {
                 userPrefersPressure: false,
                 studyPlanMode: 'even', // Set default to 'even'
                 dateSpecificStudyWindows: [],
-                daySpecificStudyWindows: []
+                daySpecificStudyWindows: [],
+                daySpecificStudyHours: [],
+                showDaySpecificHoursSection: false
             };
             let initialCommitments: FixedCommitment[] = [];
             let initialStudyPlans: StudyPlan[] = [];
